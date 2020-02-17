@@ -29,4 +29,18 @@ def PrimeFactorLarge(x):
 print(PrimeFactorLarge(600851475143))
 		    
 
-    
+#Problem 4 by Adam
+def largest_palindrome():
+  palin = 0
+
+  for x in range(999, 100, -1):
+      for y in range(x, 100, -1):
+         product = x * y
+
+         if product > palin:
+            palin_string = str(product)
+            if palin_string == palin_string[::-1]:
+                palin = product
+  return palin
+
+print(largest_palindrome())
