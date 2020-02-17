@@ -5,8 +5,20 @@ for i in range(1000):
     if (i%3==0 or i%5==0):
         sum = sum + 1
     
-print ("the sum of all multiples of 3 or 5 is equal to" , sum)
+print ("The sum of all multiples of 3 or 5 is equal to" , sum)
 
+# euler problem 2
+e0 = 1
+e = 2
+eTemp = 0
+sum = 2
+
+while e < 4000000:
+    if (e % 2 == 0): sum += e
+    eTemp = e
+    e = e + e0
+    e0 = eTemp
+print("The sum of all even-valued numbers in the Fibonacci Sequence less than 4000000 = ", sum)
 
 
 # euler problem 3 
